@@ -7,6 +7,7 @@
 # shell scriptにしても良いかも？カッコつけもありで
 
 # e.g. make pbgen
+# submodulesの.protoファイルうざいけど、手動で削除しよかな？
 pbgen:
 	make go-pbgen
 	make ts-pbgen
