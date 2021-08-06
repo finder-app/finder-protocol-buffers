@@ -17,7 +17,7 @@ message GetUsersReq {
 }
 
 message Hoge {
-  string piyosssss = 1;
+  string pi = 1;
 }
 
 message GetUsersRes {
