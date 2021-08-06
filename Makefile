@@ -16,7 +16,7 @@ pbgen:
 	git push origin master
 	(cd ../finder-frontend && \
 	git submodule update --remote)
-#
+
 # 使用方法: 全件指定ができないので、.protoファイルを書き足していく。自動化できたら良い
 # ファイル名を全件取得➡️「各model名.proto」の形式でコマンドを実行させる
 go-pbgen:
