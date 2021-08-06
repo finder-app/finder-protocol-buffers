@@ -14,7 +14,9 @@ pbgen:
 	git commit -m "pbgen ${date "+%Y-%m-%d %H:%M:%S"}"
 	git push origin master
 	(cd ../finder-frontend && \
-	git submodule update --remote)
+	git submodule update --remote && \
+	cd ./finder-protocol-buffers && \
+	)
 
 # 使用方法: 全件指定ができないので、.protoファイルを書き足していく。自動化できたら良い
 # ファイル名を全件取得➡️「各model名.proto」の形式でコマンドを実行させる
