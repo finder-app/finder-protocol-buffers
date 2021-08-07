@@ -15,7 +15,7 @@ export const ProfileServiceService: IProfileServiceService;
 
 export interface IProfileServiceServer extends grpc.UntypedServiceImplementation {
   getProfile: grpc.handleUnaryCall<profile_pb.GetProfileReq, profile_pb.GetProfileRes>;
-  updateProfile: grpc.handleClientStreamingCall<profile_pb.UpdateProfileReq, profile_pb.UpdateProfileRes>;
+  updateProfile: grpc.handleUnaryCall<profile_pb.UpdateProfileReq, profile_pb.UpdateProfileRes>;
 }
 
 export class ProfileServiceClient extends grpc.Client {
@@ -23,7 +23,7 @@ export class ProfileServiceClient extends grpc.Client {
   getProfile(argument: profile_pb.GetProfileReq, callback: grpc.requestCallback<profile_pb.GetProfileRes>): grpc.ClientUnaryCall;
   getProfile(argument: profile_pb.GetProfileReq, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<profile_pb.GetProfileRes>): grpc.ClientUnaryCall;
   getProfile(argument: profile_pb.GetProfileReq, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<profile_pb.GetProfileRes>): grpc.ClientUnaryCall;
-  updateProfile(callback: grpc.requestCallback<profile_pb.UpdateProfileRes>): grpc.ClientWritableStream<profile_pb.UpdateProfileReq>;
-  updateProfile(metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<profile_pb.UpdateProfileRes>): grpc.ClientWritableStream<profile_pb.UpdateProfileReq>;
-  updateProfile(metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<profile_pb.UpdateProfileRes>): grpc.ClientWritableStream<profile_pb.UpdateProfileReq>;
+  updateProfile(argument: profile_pb.UpdateProfileReq, callback: grpc.requestCallback<profile_pb.UpdateProfileRes>): grpc.ClientUnaryCall;
+  updateProfile(argument: profile_pb.UpdateProfileReq, metadataOrOptions: grpc.Metadata | grpc.CallOptions | null, callback: grpc.requestCallback<profile_pb.UpdateProfileRes>): grpc.ClientUnaryCall;
+  updateProfile(argument: profile_pb.UpdateProfileReq, metadata: grpc.Metadata | null, options: grpc.CallOptions | null, callback: grpc.requestCallback<profile_pb.UpdateProfileRes>): grpc.ClientUnaryCall;
 }

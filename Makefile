@@ -16,6 +16,8 @@ pbgen:
 	git push origin master
 	(cd ../finder-frontend && \
 	git submodule update --remote)
+	(cd ../finder-backend && \
+	git submodule update --remote)
 
 # 使用方法: 全件指定ができないので、.protoファイルを書き足していく。自動化できたら良い
 # ファイル名を全件取得➡️「各model名.proto」の形式でコマンドを実行させる
@@ -33,7 +35,7 @@ go-pbgen:
 
 # js_outを消すと挙動変わるかも。要検証
 ts-pbgen:
-	yarn grpc_tools_node_protoc -I ../finder-backend/protofiles \
+	yarn grpc_tools_node_protoc -I ./protofiles \
 	--plugin=protoc-gen-ts=./node_modules/.bin/protoc-gen-ts \
 	--grpc_out=grpc_js:./ts \
-	--ts_out=service=grpc-node,mode=grpc-js:./ts ../finder-backend/protofiles/*.proto
+	--ts_out=service=grpc-node,mode=grpc-js:./ts ./protofiles/*.proto

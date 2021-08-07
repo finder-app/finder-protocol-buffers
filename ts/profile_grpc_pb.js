@@ -65,7 +65,7 @@ var ProfileServiceService = exports.ProfileServiceService = {
   },
   updateProfile: {
     path: '/pb.ProfileService/UpdateProfile',
-    requestStream: true,
+    requestStream: false,
     responseStream: false,
     requestType: profile_pb.UpdateProfileReq,
     responseType: profile_pb.UpdateProfileRes,
