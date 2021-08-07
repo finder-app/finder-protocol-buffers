@@ -1,10 +1,7 @@
-# modelごとのprotoファイルを作成する e.g. make protoc s=user
-# goとtsのpbファイルを生成して、git commit & push する
-# その後、各フォルダをupdate
-# docker-composeで立ち上げてできたらなお良い
-
-# git repo名をfinder-protocol-buffersに変えたい
-# shell scriptにしても良いかも？カッコつけもありで
+# 今後やりたいこと
+# docker環境でファイルを生成したい
+# shell scriptにしたいかも。
+# 理由=>1．commitに日付を含められそう。2．go-pbgenでフォルダ内の配列を更新せず全件取得したいので
 
 # e.g. make pbgen
 # submodulesの.protoファイルうざいけど、手動で削除しよかな？
